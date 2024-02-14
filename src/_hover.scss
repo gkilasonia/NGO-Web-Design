@@ -1,0 +1,25 @@
+// HOVER EFFECT
+
+.navbar li:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+
+.navbar__button:hover,
+.container1__button:hover,
+.media-page button:hover {
+  box-shadow: 5px 5px 10px $secondaryText, -5px -5px 10px $secondaryText;
+}
+
+.element__button:hover,
+.cards__card button:hover,
+.button--1:hover,
+.button--2:hover {
+  box-shadow: 5px 5px 10px $yellow, -5px -5px 10px $yellow;
+}

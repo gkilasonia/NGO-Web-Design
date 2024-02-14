@@ -1,0 +1,52 @@
+// MIXINS
+
+@import "./veriables";
+
+@mixin label-paras {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: $primaryText;
+}
+
+@mixin headings {
+  font-size: $h2;
+  font-weight: 700;
+  line-height: 58px;
+  color: $primaryText;
+}
+
+@mixin smallhedings {
+  font-size: $h3;
+  font-weight: 700;
+  line-height: 38px;
+  color: $primaryText;
+}
+
+@mixin primaryButton {
+  width: 150px;
+  height: 50px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background-color: $yellow;
+  border: none;
+}
+
+@mixin secondaryButton {
+  width: 150px;
+  height: 50px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background-color: $white;
+  border: none;
+}
+
+@mixin navbarButton {
+  width: 115px;
+  height: 45px;
+  padding: 12px 32px;
+  border-radius: 4px;
+  background-color: #1d2130;
+  border: none;
+}

@@ -1,0 +1,39 @@
+// CONTACT PAGE
+
+@import "./veriables";
+@import "./mixin";
+
+.section-page {
+  max-width: 1500px;
+  height: 580px;
+  margin: 0 auto;
+  padding-top: 75px;
+  background-color: $yellowLight;
+}
+
+.section-page__text {
+  height: 100%;
+  margin-left: 205px;
+}
+
+.section-page__text p:nth-child(1) {
+  @include label-paras;
+  margin-bottom: 26px;
+}
+
+.section-page__text h3 {
+  @include smallhedings;
+  margin-bottom: 10px;
+}
+
+.section-page__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 32px;
+}
+
+.section-page__map iframe {
+  width: 100%;
+  height: 450px;
+}

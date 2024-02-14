@@ -1,0 +1,55 @@
+// ABOUT US PAGE
+
+@import "./veriables";
+@import "./mixin";
+
+.about-us-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 48px;
+  max-width: 1280px;
+  height: 575px;
+  margin: 123px auto 125px auto;
+  border-radius: 20px;
+  background-color: $yellow;
+}
+
+.about-us-page__text {
+  width: 38%;
+}
+
+.about-us-page__text p:nth-child(1) {
+  @include label-paras;
+}
+
+.about-us-page__text h2 {
+  @include headings;
+}
+
+.about-us-page__text p:nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $black;
+}
+
+.text__info {
+  display: flex;
+  justify-content: space-between;
+  width: 59%;
+  height: 57px;
+  margin-top: 32px;
+}
+
+.text__info h3 {
+  font-size: $h3;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.text__info p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19px;
+}

@@ -1,0 +1,33 @@
+// MEDIA PAGE
+
+@import "./veriables";
+@import "./mixin";
+
+.media-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1500px;
+  height: 770px;
+  margin: auto;
+  background-color: $yellowLight;
+}
+
+.media-page__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+  height: 370px;
+  margin-left: 205px;
+}
+
+.media-page__text h1 {
+  font-size: $h1;
+  font-weight: 700;
+  line-height: 67px;
+}
+
+.media-page__text button {
+  @include primaryButton;
+}

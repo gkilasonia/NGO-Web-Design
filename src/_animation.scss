@@ -1,0 +1,67 @@
+// ANIMATION EFFECT
+
+.navbar__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 55px;
+  gap: 3px;
+}
+
+.heart__item {
+  width: 5px;
+  height: 40px;
+  background-color: $yellow;
+  border-radius: 100px;
+}
+
+.heart__item:first-child,
+.heart__item:last-child {
+  height: 15px;
+  position: relative;
+  top: -6px;
+}
+
+.heart__item:nth-child(2),
+.heart__item:nth-child(8) {
+  height: 30px;
+  position: relative;
+  top: -5px;
+  animation: heartBeat infinite 1s ease-in-out;
+}
+
+.heart__item:nth-child(3),
+.heart__item:nth-child(7) {
+  height: 40px;
+  position: relative;
+  top: -3px;
+  animation: heartBeat infinite 1s ease-in-out;
+}
+
+.heart__item:nth-child(4),
+.heart__item:nth-child(6) {
+  height: 40px;
+  position: relative;
+  animation: heartBeat infinite 1s ease-in-out;
+}
+
+.heart__item:nth-child(5) {
+  height: 42px;
+  position: relative;
+  top: 5px;
+  animation: heartBeat infinite 1s ease-in-out;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scaley(1);
+  }
+  50% {
+    transform: scaley(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

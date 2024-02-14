@@ -1,0 +1,494 @@
+@import "./mixin", "./hover", "./veriables", "./aboutus", "./whatwedo",
+  "./media", "./contact", "./animation", "./after";
+
+@use "./aboutus";
+@use "./whatwedo";
+@use "./media";
+@use "./contact";
+@use "./hover";
+@use "./animation";
+@use "./after";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+// NAVBAR
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1500px;
+  height: 90px;
+  margin: auto;
+  border-bottom: 1px solid $black;
+}
+
+.navbar__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  width: 33%;
+  height: 50px;
+}
+
+.navbar li a {
+  text-decoration: none;
+}
+
+.navbar__button {
+  @include navbarButton;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $offWhite;
+}
+
+.navbar__burger-menu {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+// BANNER
+
+.banner {
+  max-width: 1500px;
+  height: 735px;
+  margin: auto;
+  background-image: url(../../img/happy-children.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// CONTAINER 1
+
+.banner__container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 43%;
+  height: 330px;
+  position: relative;
+  top: 120px;
+  left: 110px;
+}
+
+.container1__header {
+  font-size: $homeHeading;
+  font-weight: 700;
+  line-height: 77px;
+  color: $white;
+}
+
+.container1__element {
+  width: 315px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element__button {
+  @include secondaryButton;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $primaryText;
+}
+
+.element__link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 140px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  text-decoration: none;
+  color: $white;
+}
+
+.link__image {
+  height: 24px;
+}
+
+// CONTAINER 2
+
+.banner__container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  width: 85%;
+  height: 20px;
+  position: relative;
+  bottom: 65px;
+  left: 110px;
+}
+
+.container2__para {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.container2__line {
+  width: 835px;
+  border: 1px solid $border;
+}
+
+// ABOUT US
+
+.aboutus {
+  max-width: 1280px;
+  height: 725px;
+  margin: 85px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// CONTAINER 1
+
+.aboutus__container1 {
+  display: flex;
+  gap: 85px;
+  width: 92%;
+  margin: auto;
+}
+
+.container1__section1 {
+  flex-grow: 610px;
+  width: 610px;
+  height: 455px;
+}
+
+.section1__para--1 {
+  @include label-paras;
+  margin-top: 95px;
+}
+
+.container1__h2 {
+  @include headings;
+  margin-top: 32px;
+}
+
+.section1__para--2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $secondaryText;
+  margin-top: 32px;
+}
+
+.container1__button {
+  @include primaryButton;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $black;
+  margin-top: 50px;
+}
+
+.container1__section2 {
+  flex-grow: 480px;
+  width: 480px;
+  height: 580px;
+  background-image: url(../../img/BG.png);
+}
+
+.link__image--2 {
+  margin: 258px 44%;
+}
+
+// CONTAINER 2
+
+.aboutus__container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 82px;
+  margin-top: 65px;
+}
+
+.container2__section1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section1__para--3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: $primaryText;
+}
+
+.section1__line {
+  width: 1095px;
+  border: 1px solid $border;
+}
+
+.container2__section2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+// WHAT WE DO
+
+.whatwedo {
+  max-width: 1500px;
+  height: 900px;
+  margin: auto;
+  background-color: $yellowLight;
+  padding: 100px 0 0 200px;
+}
+
+.whatwedo__para {
+  @include label-paras;
+}
+
+.whatwedo__container {
+  display: flex;
+  width: 93%;
+  margin-top: 32px;
+  gap: 95px;
+}
+
+.container__section1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 51%;
+}
+
+.section1__part1 h2 {
+  @include headings;
+}
+.section1__part1 p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $secondaryText;
+}
+
+.section1__part2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 76%;
+  height: 442px;
+  padding-left: 75px;
+}
+
+.part2__partitions h3 {
+  font-size: $h3;
+  font-weight: 700;
+  line-height: 28px;
+  color: $primaryText;
+  margin-bottom: 14px;
+}
+
+.part2__partitions p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $secondaryText;
+}
+
+// PROJECTS WE HAVE DONE
+
+.projects-we-have-done {
+  max-width: 1280px;
+  height: 710px;
+  margin: auto;
+  margin-top: 95px;
+}
+
+.projects-we-have-done__p {
+  @include label-paras;
+  margin-left: 95px;
+}
+
+.projects-we-have-done__h2 {
+  @include headings;
+  width: 50%;
+  margin-top: 32px;
+  margin-left: 95px;
+}
+
+.projects-we-have-done__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.cards__card {
+  width: 32%;
+  height: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 60px 0 0 48px;
+  position: relative;
+}
+
+.card-1 {
+  background-image: url(../../img/card1.png);
+}
+
+.card-2 {
+  background-image: url(../../img/card2.png);
+}
+
+.card-3 {
+  background-image: url(../../img/card3.png);
+}
+
+.cards__card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 42px;
+  color: $white;
+  width: 87%;
+  margin-bottom: 16px;
+}
+
+.cards__card p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $white;
+  width: 87%;
+}
+
+.cards__card button {
+  @include secondaryButton;
+  position: absolute;
+  bottom: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $primaryText;
+}
+
+// CONTRIBUTION
+
+.contribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1500px;
+  height: 475px;
+  margin: 125px auto 0 auto;
+  background-image: url(../../img/contributionBG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contribution h2 {
+  @include headings;
+  width: 62%;
+  margin-top: 115px;
+  text-align: center;
+  color: $white;
+}
+
+.contribution__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 26%;
+  margin-top: 70px;
+}
+
+.button--1 {
+  width: 200px;
+  height: 50px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: $yellow;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.button--2 {
+  width: 115px;
+  height: 50px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: $white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+// FOOTER
+
+footer {
+  max-width: 1500px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $black;
+  margin: 125px auto 0 auto;
+  color: $white;
+}
+
+footer img {
+  width: 125px;
+  height: 45px;
+}
+
+.info {
+  display: flex;
+  gap: 88px;
+}
+
+.info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.info ul li:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+footer h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  width: 30%;
+}
+
+@import "./responsive";
+@use "./responsive";
